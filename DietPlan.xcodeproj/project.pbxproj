@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		7638274829D45382002212DD /* DietPlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638274729D45382002212DD /* DietPlanApp.swift */; };
-		7638274A29D45382002212DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638274929D45382002212DD /* ContentView.swift */; };
+		7638274A29D45382002212DD /* DietPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638274929D45382002212DD /* DietPlanView.swift */; };
 		7638274C29D45384002212DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7638274B29D45384002212DD /* Assets.xcassets */; };
 		7638274F29D45384002212DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7638274E29D45384002212DD /* Preview Assets.xcassets */; };
+		7638276629D469E5002212DD /* Tela03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276529D469E5002212DD /* Tela03.swift */; };
+		7638276829D46A09002212DD /* Tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276729D46A09002212DD /* Tela02.swift */; };
+		7638276A29D46A13002212DD /* Tela01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276929D46A13002212DD /* Tela01.swift */; };
+		7638276C29D47113002212DD /* Tela01Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276B29D47113002212DD /* Tela01Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7638274429D45382002212DD /* DietPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DietPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7638274729D45382002212DD /* DietPlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanApp.swift; sourceTree = "<group>"; };
-		7638274929D45382002212DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7638274929D45382002212DD /* DietPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanView.swift; sourceTree = "<group>"; };
 		7638274B29D45384002212DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7638274E29D45384002212DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7638276529D469E5002212DD /* Tela03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03.swift; sourceTree = "<group>"; };
+		7638276729D46A09002212DD /* Tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02.swift; sourceTree = "<group>"; };
+		7638276929D46A13002212DD /* Tela01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01.swift; sourceTree = "<group>"; };
+		7638276B29D47113002212DD /* Tela01Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,10 @@
 		7638274629D45382002212DD /* DietPlan */ = {
 			isa = PBXGroup;
 			children = (
-				7638274729D45382002212DD /* DietPlanApp.swift */,
-				7638274929D45382002212DD /* ContentView.swift */,
+				7638275829D45C75002212DD /* DietPlanMain */,
+				7638275929D45C95002212DD /* DietPlanTela01 */,
+				7638275D29D45D1C002212DD /* DietPlanTela02 */,
+				7638275E29D45D26002212DD /* DietPlanTela03 */,
 				7638274B29D45384002212DD /* Assets.xcassets */,
 				7638274D29D45384002212DD /* Preview Content */,
 			);
@@ -65,6 +75,136 @@
 				7638274E29D45384002212DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7638275529D45BFE002212DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7638274729D45382002212DD /* DietPlanApp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7638275629D45C39002212DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7638274929D45382002212DD /* DietPlanView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7638275729D45C41002212DD /* VielModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VielModel;
+			sourceTree = "<group>";
+		};
+		7638275829D45C75002212DD /* DietPlanMain */ = {
+			isa = PBXGroup;
+			children = (
+				7638275529D45BFE002212DD /* Model */,
+				7638275629D45C39002212DD /* View */,
+				7638275729D45C41002212DD /* VielModel */,
+			);
+			path = DietPlanMain;
+			sourceTree = "<group>";
+		};
+		7638275929D45C95002212DD /* DietPlanTela01 */ = {
+			isa = PBXGroup;
+			children = (
+				7638275B29D45CC7002212DD /* Model */,
+				7638275C29D45CD0002212DD /* View */,
+				7638275A29D45CBA002212DD /* ViewModel */,
+			);
+			path = DietPlanTela01;
+			sourceTree = "<group>";
+		};
+		7638275A29D45CBA002212DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7638275B29D45CC7002212DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7638276B29D47113002212DD /* Tela01Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7638275C29D45CD0002212DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7638276929D46A13002212DD /* Tela01.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7638275D29D45D1C002212DD /* DietPlanTela02 */ = {
+			isa = PBXGroup;
+			children = (
+				7638276129D45D48002212DD /* Model */,
+				7638276029D45D42002212DD /* View */,
+				7638275F29D45D36002212DD /* ViewModel */,
+			);
+			path = DietPlanTela02;
+			sourceTree = "<group>";
+		};
+		7638275E29D45D26002212DD /* DietPlanTela03 */ = {
+			isa = PBXGroup;
+			children = (
+				7638276429D45D66002212DD /* Model */,
+				7638276329D45D5F002212DD /* View */,
+				7638276229D45D59002212DD /* ViewModel */,
+			);
+			path = DietPlanTela03;
+			sourceTree = "<group>";
+		};
+		7638275F29D45D36002212DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7638276029D45D42002212DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7638276729D46A09002212DD /* Tela02.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7638276129D45D48002212DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7638276229D45D59002212DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7638276329D45D5F002212DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7638276529D469E5002212DD /* Tela03.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7638276429D45D66002212DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7638274A29D45382002212DD /* ContentView.swift in Sources */,
+				7638276C29D47113002212DD /* Tela01Model.swift in Sources */,
+				7638274A29D45382002212DD /* DietPlanView.swift in Sources */,
 				7638274829D45382002212DD /* DietPlanApp.swift in Sources */,
+				7638276629D469E5002212DD /* Tela03.swift in Sources */,
+				7638276829D46A09002212DD /* Tela02.swift in Sources */,
+				7638276A29D46A13002212DD /* Tela01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
