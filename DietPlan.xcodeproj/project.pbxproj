@@ -13,8 +13,14 @@
 		7638274F29D45384002212DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7638274E29D45384002212DD /* Preview Assets.xcassets */; };
 		7638276629D469E5002212DD /* Tela03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276529D469E5002212DD /* Tela03.swift */; };
 		7638276829D46A09002212DD /* Tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276729D46A09002212DD /* Tela02.swift */; };
-		7638276A29D46A13002212DD /* Tela01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276929D46A13002212DD /* Tela01.swift */; };
-		7638276C29D47113002212DD /* Tela01Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276B29D47113002212DD /* Tela01Model.swift */; };
+		7638276A29D46A13002212DD /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276929D46A13002212DD /* WeightView.swift */; };
+		7638276C29D47113002212DD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276B29D47113002212DD /* Model.swift */; };
+		7638276E29D592C4002212DD /* HeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276D29D592C4002212DD /* HeightView.swift */; };
+		7638277029D592D9002212DD /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276F29D592D9002212DD /* AgeView.swift */; };
+		7638277229D592EB002212DD /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277129D592EB002212DD /* GenderView.swift */; };
+		7638277429D5931B002212DD /* ActivityLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277329D5931B002212DD /* ActivityLevelView.swift */; };
+		7638277729D593C2002212DD /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277629D593C2002212DD /* GoalView.swift */; };
+		7638277929D59559002212DD /* CalorieIntakeTmbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277829D59559002212DD /* CalorieIntakeTmbView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +31,14 @@
 		7638274E29D45384002212DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7638276529D469E5002212DD /* Tela03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03.swift; sourceTree = "<group>"; };
 		7638276729D46A09002212DD /* Tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02.swift; sourceTree = "<group>"; };
-		7638276929D46A13002212DD /* Tela01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01.swift; sourceTree = "<group>"; };
-		7638276B29D47113002212DD /* Tela01Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01Model.swift; sourceTree = "<group>"; };
+		7638276929D46A13002212DD /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		7638276B29D47113002212DD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7638276D29D592C4002212DD /* HeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightView.swift; sourceTree = "<group>"; };
+		7638276F29D592D9002212DD /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
+		7638277129D592EB002212DD /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		7638277329D5931B002212DD /* ActivityLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelView.swift; sourceTree = "<group>"; };
+		7638277629D593C2002212DD /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		7638277829D59559002212DD /* CalorieIntakeTmbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieIntakeTmbView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				7638275829D45C75002212DD /* DietPlanMain */,
-				7638275929D45C95002212DD /* DietPlanTela01 */,
+				7638275929D45C95002212DD /* DietPlanViews */,
 				7638275D29D45D1C002212DD /* DietPlanTela02 */,
 				7638275E29D45D26002212DD /* DietPlanTela03 */,
 				7638274B29D45384002212DD /* Assets.xcassets */,
@@ -110,14 +122,14 @@
 			path = DietPlanMain;
 			sourceTree = "<group>";
 		};
-		7638275929D45C95002212DD /* DietPlanTela01 */ = {
+		7638275929D45C95002212DD /* DietPlanViews */ = {
 			isa = PBXGroup;
 			children = (
 				7638275B29D45CC7002212DD /* Model */,
 				7638275C29D45CD0002212DD /* View */,
 				7638275A29D45CBA002212DD /* ViewModel */,
 			);
-			path = DietPlanTela01;
+			path = DietPlanViews;
 			sourceTree = "<group>";
 		};
 		7638275A29D45CBA002212DD /* ViewModel */ = {
@@ -130,7 +142,7 @@
 		7638275B29D45CC7002212DD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7638276B29D47113002212DD /* Tela01Model.swift */,
+				7638276B29D47113002212DD /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,7 +150,13 @@
 		7638275C29D45CD0002212DD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7638276929D46A13002212DD /* Tela01.swift */,
+				7638276929D46A13002212DD /* WeightView.swift */,
+				7638276D29D592C4002212DD /* HeightView.swift */,
+				7638276F29D592D9002212DD /* AgeView.swift */,
+				7638277129D592EB002212DD /* GenderView.swift */,
+				7638277329D5931B002212DD /* ActivityLevelView.swift */,
+				7638277629D593C2002212DD /* GoalView.swift */,
+				7638277829D59559002212DD /* CalorieIntakeTmbView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,12 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7638276C29D47113002212DD /* Tela01Model.swift in Sources */,
+				7638277229D592EB002212DD /* GenderView.swift in Sources */,
+				7638277029D592D9002212DD /* AgeView.swift in Sources */,
+				7638276C29D47113002212DD /* Model.swift in Sources */,
+				7638277729D593C2002212DD /* GoalView.swift in Sources */,
 				7638274A29D45382002212DD /* DietPlanView.swift in Sources */,
+				7638277429D5931B002212DD /* ActivityLevelView.swift in Sources */,
+				7638277929D59559002212DD /* CalorieIntakeTmbView.swift in Sources */,
 				7638274829D45382002212DD /* DietPlanApp.swift in Sources */,
 				7638276629D469E5002212DD /* Tela03.swift in Sources */,
+				7638276E29D592C4002212DD /* HeightView.swift in Sources */,
 				7638276829D46A09002212DD /* Tela02.swift in Sources */,
-				7638276A29D46A13002212DD /* Tela01.swift in Sources */,
+				7638276A29D46A13002212DD /* WeightView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

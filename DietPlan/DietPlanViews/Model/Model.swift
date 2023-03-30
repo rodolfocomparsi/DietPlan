@@ -5,9 +5,12 @@
 //  Created by Rodolfo Comparsi on 29/03/23.
 //
 import Foundation
-
+import SwiftUI
+ var save = Save()
 
 class TmbFunc: ObservableObject {
+
+    
     @Published var weight: String = ""
     @Published var height: String = ""
     @Published var age: String = ""
@@ -17,11 +20,11 @@ class TmbFunc: ObservableObject {
     var genderOptions = ["Male", "Female"]
 
     var tmb: Double {
-        let weightInKilograms = Double(weight) ?? 0
-        let heightInCentimeters = Double(height) ?? 0
-        let ageInYears = Double(age) ?? 0
+        let weightInKilograms = Double(save.weight) ?? 0
+        let heightInCentimeters = Double(save.height) ?? 0
+        let ageInYears = Double(save.age) ?? 0
         let tmb: Double
-        if gender == "Male" {
+        if save.gender == "Male" {
             tmb = 66 + (13.7 * weightInKilograms) + (5 * heightInCentimeters) - (6.8 * ageInYears)
         } else {
             tmb = 655 + (9.6 * weightInKilograms) + (1.8 * heightInCentimeters) - (4.7 * ageInYears)
@@ -29,7 +32,7 @@ class TmbFunc: ObservableObject {
         return tmb * activityLevel
     }
 
-    func calorieIntake() -> Double {
+    var calorieIntake: Double {
         switch goal {
         case "Build Muscle":
             return tmb * 1.2
@@ -42,8 +45,24 @@ class TmbFunc: ObservableObject {
 }
 
 
+struct NextButton: View {
+    var body: some View {
+        Text("Next")
+            .bold()
+            .frame(width: 80, height: 40)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+    }
+}
 
-    
+struct Save {
+    @AppStorage("weight") var weight: String = ""
+    @AppStorage("height") var height: String = ""
+    @AppStorage("age") var age: String = ""
+    @AppStorage("gender") var gender: String = ""
+    @AppStorage("activityLevel") var activityLevel: Double = 1.2
+    @AppStorage("goal") var goal: String = ""
+}
 
 struct ActivityLevelOption {
     let factor: Double
@@ -57,7 +76,6 @@ let activityLevelOptions = [
     ActivityLevelOption(factor: 1.725, description: "Very Active (hard exercise/sports 6-7 days a week)"),
     ActivityLevelOption(factor: 1.9, description: "Extremely Active (very hard exercise/sports & physical job or 2x training)")
 ]
-let goalOptions = ["Build Muscle", "Lose Weight", "Maintain Weight"]
 
 
 
