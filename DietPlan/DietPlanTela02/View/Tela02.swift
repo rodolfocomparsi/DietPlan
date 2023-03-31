@@ -11,7 +11,7 @@ struct Tela02: View {
     var body: some View {
         Text("tela 02")
             .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-            .background(LinearGradient(colors: [.cyan, .green],
+            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
                                    startPoint: .top,
                                    endPoint: .center)
                                    .opacity(0.8))

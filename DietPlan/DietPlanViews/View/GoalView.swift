@@ -41,7 +41,7 @@ struct GoalView: View {
                 })
             }
             .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-            .background(LinearGradient(colors: [.cyan, .green],
+            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
                                    startPoint: .top,
                                    endPoint: .center)
                                    .opacity(0.8))

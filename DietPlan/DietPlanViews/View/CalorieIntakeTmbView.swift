@@ -10,22 +10,53 @@ import SwiftUI
 struct CalorieIntakeTmbView: View {
     @StateObject var tmbFunc = TmbFunc()
     
+    @State private var isNextPageActive7 = false
+    
+    
     var body: some View {
         
-        VStack{
-            Section(header: Text("TMB")) {
-                Text("\(tmbFunc.tmb, specifier: "%.0f") calories per day")
+        
+        NavigationStack{
+            VStack(spacing: 30){
+                VStack{
+                    Section(header: Text("TMB")) {
+                        Text("\(tmbFunc.tmb, specifier: "%.0f") calories per day")
+                    }
+                    Section(header: Text("Calorie Intake")) {
+                        Text("\(tmbFunc.calorieIntake, specifier:"%.0f") calories per day")
+                    }
+                    
+                }
+                
+                NavigationLink(destination: Tela02(), isActive: $isNextPageActive7, label: {
+                    Button {
+                        isNextPageActive7 = true
+                    } label: {
+                        Text("Ok")
+                    }
+                    .buttonStyle(.borderedProminent)
+                })
+                    
+
+                
+                
             }
-            Section(header: Text("Calorie Intake")) {
-                Text("\(tmbFunc.calorieIntake, specifier:"%.0f") calories per day")
-            }
+            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
+            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
+                                       startPoint: .top,
+                                       endPoint: .center)
+                                       .opacity(0.8))
+            
+         
+
+            
+            
             
         }
-        .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-        .background(LinearGradient(colors: [.cyan, .green],
-                               startPoint: .top,
-                               endPoint: .center)
-                               .opacity(0.8))
+            
+            
+            
+         
     }
 }
 
