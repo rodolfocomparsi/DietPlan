@@ -15,7 +15,7 @@ struct HeightView: View {
     var body: some View {
         NavigationStack{
             VStack(spacing: 60){
-                Text("Enter your information")
+                Text("Enter your Height")
                 
                 TextField("Height (cm)", text: $tmbFunc.height)
                     .keyboardType(.decimalPad)

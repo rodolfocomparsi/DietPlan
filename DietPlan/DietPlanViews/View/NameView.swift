@@ -1,15 +1,16 @@
 //
-//  Tela02.swift
+//  NameView.swift
 //  DietPlan
 //
-//  Created by Rodolfo Comparsi on 29/03/23.
+//  Created by Axel Franco on 31/03/23.
 //
 
+import Foundation
 import SwiftUI
 
-struct WeightView: View {
+struct NameView: View {
     @StateObject var tmbFunc = TmbFunc()
-    @State private var isNextPageActive = false
+    @State private var isNextPageActive0 = false
     
     var body: some View {
     
@@ -17,24 +18,22 @@ struct WeightView: View {
             
             VStack(spacing: 60){
                     
-                    Text("Enter your Weight")
+                    Text("Enter your Name")
                     
-                    TextField("Weight(kg)", text: $tmbFunc.weight)
-                        .keyboardType(.decimalPad)
-                        .frame(width: 100)
-                    
+                    TextField("Name:", text: $tmbFunc.name)
+                    .frame(width: 100)
                     
                     
-                    NavigationLink(destination: HeightView(), isActive: $isNextPageActive, label: {
+                    
+                    NavigationLink(destination: WeightView(), isActive: $isNextPageActive0, label: {
                         Button(action: {
-                            tmbFunc.weight = String(tmbFunc.weight)
-                            isNextPageActive = true
+                            isNextPageActive0 = true
                         }){
                             NextButton()
-                                .background(tmbFunc.weight.isEmpty ? Color.gray : Color.blue)
+                                .background(tmbFunc.name.isEmpty ? Color.gray : Color.blue)
                                 .cornerRadius(8)
                         }
-                        .disabled(tmbFunc.weight.isEmpty) // desativa o botão enquanto o campo de texto estiver vazio
+                        .disabled(tmbFunc.name.isEmpty) // desativa o botão enquanto o campo de texto estiver vazio
                     })
                 
             }.frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
@@ -52,8 +51,8 @@ struct WeightView: View {
 
 
 
-struct Tela01_Previews: PreviewProvider {
+struct NameView_Previews: PreviewProvider {
     static var previews: some View {
-        WeightView()
+        NameView()
     }
 }

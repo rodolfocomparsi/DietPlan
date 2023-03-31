@@ -12,22 +12,24 @@ struct Foods{
     
     @State var name = String()
     @State var photo = String()
-    @State var kcal = String()
+    @State var kcal = Int()
+    
 }
+
 
 
 struct FoodStruct: View{
     
-    var food = [
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70"),
-        Foods(name: "Banana", photo: "banana", kcal: "70")
+    @State var food = [
+        Foods(name: "Banana", photo: "banana", kcal: 70),
+        Foods(name: "Ameixa", photo: "ameixa", kcal: 70),
+        Foods(name: "Kiwi", photo: "kiwi", kcal: 70),
+        Foods(name: "Banana", photo: "banana", kcal: 70),
+        Foods(name: "Banana", photo: "banana", kcal: 70),
+        Foods(name: "Banana", photo: "banana", kcal: 70),
+        Foods(name: "Banana", photo: "banana", kcal: 70),
+        Foods(name: "Banana", photo: "banana", kcal: 70),
+        Foods(name: "Banana", photo: "banana", kcal: 70)
     ]
     
     

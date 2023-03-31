@@ -16,16 +16,16 @@ struct DietPlanView: View {
         VStack{
             TabView(selection: $selectionTabView) {
                 
-                WeightView()
+                NameView()
                     .tabItem {
-                        Image(systemName: "person")
+                        Image(systemName: "info.circle.fill")
                         Text("Information")
                     }
                 
                 Tela02()
                     .tabItem {
-                        Image(systemName: "dumbbell")
-                        Text("tela 02")
+                        Image(systemName: "person.circle")
+                        Text("Perfil")
                     }
                 
                 Tela03()

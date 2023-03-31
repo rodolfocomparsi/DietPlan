@@ -21,6 +21,7 @@
 		7638277429D5931B002212DD /* ActivityLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277329D5931B002212DD /* ActivityLevelView.swift */; };
 		7638277729D593C2002212DD /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277629D593C2002212DD /* GoalView.swift */; };
 		7638277929D59559002212DD /* CalorieIntakeTmbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277829D59559002212DD /* CalorieIntakeTmbView.swift */; };
+		AE705EE229D76025001C9B59 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE705EE129D76025001C9B59 /* NameView.swift */; };
 		AED01B3829D715B700B39232 /* FoodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED01B3729D715B700B39232 /* FoodsModel.swift */; };
 		AED01B3A29D7184600B39232 /* Tela03View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED01B3929D7184600B39232 /* Tela03View.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		7638277329D5931B002212DD /* ActivityLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelView.swift; sourceTree = "<group>"; };
 		7638277629D593C2002212DD /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		7638277829D59559002212DD /* CalorieIntakeTmbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieIntakeTmbView.swift; sourceTree = "<group>"; };
+		AE705EE129D76025001C9B59 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		AED01B3729D715B700B39232 /* FoodsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsModel.swift; sourceTree = "<group>"; };
 		AED01B3929D7184600B39232 /* Tela03View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 		7638275C29D45CD0002212DD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE705EE129D76025001C9B59 /* NameView.swift */,
 				7638276929D46A13002212DD /* WeightView.swift */,
 				7638276D29D592C4002212DD /* HeightView.swift */,
 				7638276F29D592D9002212DD /* AgeView.swift */,
@@ -319,6 +322,7 @@
 			files = (
 				7638277229D592EB002212DD /* GenderView.swift in Sources */,
 				AED01B3829D715B700B39232 /* FoodsModel.swift in Sources */,
+				AE705EE229D76025001C9B59 /* NameView.swift in Sources */,
 				AED01B3A29D7184600B39232 /* Tela03View.swift in Sources */,
 				7638277029D592D9002212DD /* AgeView.swift in Sources */,
 				7638276C29D47113002212DD /* Model.swift in Sources */,
