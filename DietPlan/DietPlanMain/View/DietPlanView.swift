@@ -31,7 +31,7 @@ struct DietPlanView: View {
                 Tela03()
                     .tabItem {
                         Image(systemName: "fork.knife.circle")
-                        Text("tela 01")
+                        Text("Foods")
                     }
                 
                 
@@ -41,10 +41,10 @@ struct DietPlanView: View {
             
         }
         .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-        .background(LinearGradient(colors: [.cyan, .green],
-                               startPoint: .top,
-                               endPoint: .center)
-                               .opacity(0.8))
+//        .background(LinearGradient(colors: [.cyan, .green],
+//                               startPoint: .top,
+//                               endPoint: .center)
+//                               .opacity(0.8))
     }
     
 }
