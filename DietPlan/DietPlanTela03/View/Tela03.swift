@@ -10,6 +10,11 @@ import SwiftUI
 struct Tela03: View {
     var body: some View {
         Text("tela 03!")
+            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
+            .background(LinearGradient(colors: [.cyan, .green],
+                                   startPoint: .top,
+                                   endPoint: .center)
+                                   .opacity(0.8))
     }
 }
 

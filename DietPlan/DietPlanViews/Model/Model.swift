@@ -9,7 +9,8 @@ import SwiftUI
 
 class TmbFunc: ObservableObject {
     
-    
+
+     
     @AppStorage("weight") var weight: String = ""
     @AppStorage("height") var height: String = ""
     @AppStorage("age") var age: String = ""
@@ -53,7 +54,7 @@ struct NextButton: View {
     }
 }
 
-
+ 
 
 struct ActivityLevelOption {
     let factor: Double

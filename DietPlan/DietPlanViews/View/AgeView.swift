@@ -35,6 +35,11 @@ struct AgeView: View {
                     .disabled(tmbFunc.age.isEmpty) // desativa o botão enquanto o campo de texto estiver vazio
                 })
             }
+            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
+            .background(LinearGradient(colors: [.cyan, .green],
+                                   startPoint: .top,
+                                   endPoint: .center)
+                                   .opacity(0.8))
             
         }
         
