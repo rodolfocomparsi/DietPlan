@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WeightView: View {
-    var save = Save()
     @StateObject var tmbFunc = TmbFunc()
     @State private var isNextPageActive = false
     
@@ -25,7 +24,7 @@ struct WeightView: View {
                 
                 NavigationLink(destination: HeightView(), isActive: $isNextPageActive, label: {
                     Button(action: {
-                        save.weight = String(tmbFunc.weight) ?? ""
+                        tmbFunc.weight = String(tmbFunc.weight) 
                         isNextPageActive = true
                     }){
                         NextButton()

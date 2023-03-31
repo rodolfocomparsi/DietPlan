@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GoalView: View {
-    var save = Save()
 
     let goalOptions = ["Build Muscle", "Lose Weight", "Maintain Weight"]
     @StateObject var tmbFunc = TmbFunc()

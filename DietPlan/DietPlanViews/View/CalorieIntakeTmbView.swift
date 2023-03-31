@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CalorieIntakeTmbView: View {
-    var save = Save()
     @StateObject var tmbFunc = TmbFunc()
     
     var body: some View {

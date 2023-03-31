@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct GenderView: View {
-    var save = Save()
-    
     @State private var isNextPageActive4 = false
 
     @StateObject var tmbFunc = TmbFunc()
@@ -31,7 +29,7 @@ struct GenderView: View {
                 
                 NavigationLink(destination: ActivityLevelView(), isActive: $isNextPageActive4, label: {
                     Button(action: {
-                        save.gender = String(tmbFunc.gender) ?? ""
+                        tmbFunc.gender = String(tmbFunc.gender)
                         isNextPageActive4 = true
                     }){
                         NextButton()

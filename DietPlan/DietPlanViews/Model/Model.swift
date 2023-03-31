@@ -6,32 +6,30 @@
 //
 import Foundation
 import SwiftUI
- var save = Save()
 
 class TmbFunc: ObservableObject {
-
     
-    @Published var weight: String = ""
-    @Published var height: String = ""
-    @Published var age: String = ""
-    @Published var gender: String = "Female"
-    @Published var activityLevel: Double = 1.2
-    @Published var goal: String = "Maintain Weight"
+    
+    @AppStorage("weight") var weight: String = ""
+    @AppStorage("height") var height: String = ""
+    @AppStorage("age") var age: String = ""
+    @AppStorage("gender") var gender: String = "Female"
+    @AppStorage("activityLevel") var activityLevel: Double = 1.2
+    @AppStorage("goal") var goal: String = "Maintain Weight"
     var genderOptions = ["Male", "Female"]
 
     var tmb: Double {
-        let weightInKilograms = Double(save.weight) ?? 0
-        let heightInCentimeters = Double(save.height) ?? 0
-        let ageInYears = Double(save.age) ?? 0
+        let weightInKilograms = Double(weight) ?? 0
+        let heightInCentimeters = Double(height) ?? 0
+        let ageInYears = Double(age) ?? 0
         let tmb: Double
-        if save.gender == "Male" {
+        if gender == "Male" {
             tmb = 66 + (13.7 * weightInKilograms) + (5 * heightInCentimeters) - (6.8 * ageInYears)
         } else {
             tmb = 655 + (9.6 * weightInKilograms) + (1.8 * heightInCentimeters) - (4.7 * ageInYears)
         }
         return tmb * activityLevel
     }
-
     var calorieIntake: Double {
         switch goal {
         case "Build Muscle":
@@ -55,14 +53,7 @@ struct NextButton: View {
     }
 }
 
-struct Save {
-    @AppStorage("weight") var weight: String = ""
-    @AppStorage("height") var height: String = ""
-    @AppStorage("age") var age: String = ""
-    @AppStorage("gender") var gender: String = ""
-    @AppStorage("activityLevel") var activityLevel: Double = 1.2
-    @AppStorage("goal") var goal: String = ""
-}
+
 
 struct ActivityLevelOption {
     let factor: Double

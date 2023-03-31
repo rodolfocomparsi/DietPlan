@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct HeightView: View {
-    var save = Save()
-
     @State private var isNextPageActive2 = false
 
     @StateObject var tmbFunc = TmbFunc()
@@ -27,7 +25,7 @@ struct HeightView: View {
                 
                 NavigationLink(destination: AgeView(), isActive: $isNextPageActive2, label: {
                     Button(action: {
-                        save.height = String(tmbFunc.height) ?? ""
+                        tmbFunc.height = String(tmbFunc.height) 
                         isNextPageActive2 = true
                     }){
                         NextButton()

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct AgeView: View {
-    var save = Save()
-
     @State private var isNextPageActive3 = false
 
     @StateObject var tmbFunc = TmbFunc()
@@ -27,7 +25,7 @@ struct AgeView: View {
                 
                 NavigationLink(destination: GenderView(), isActive: $isNextPageActive3, label: {
                     Button(action: {
-                        save.age = String(tmbFunc.age) ?? ""
+                        tmbFunc.age = String(tmbFunc.age) 
                         isNextPageActive3 = true
                     }){
                         NextButton()

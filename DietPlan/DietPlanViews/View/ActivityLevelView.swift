@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ActivityLevelView: View {
-    var save = Save()
-
     @State private var isNextPageActive5 = false
 
     @StateObject var tmbFunc = TmbFunc()
@@ -30,7 +28,7 @@ struct ActivityLevelView: View {
                 
                 NavigationLink(destination: GoalView(), isActive: $isNextPageActive5, label: {
                     Button(action: {
-                        save.goal = String(tmbFunc.goal) ?? ""
+                        tmbFunc.goal = String(tmbFunc.goal) 
 
                         isNextPageActive5 = true
                     }){
