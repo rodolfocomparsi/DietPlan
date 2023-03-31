@@ -15,7 +15,7 @@ struct AgeView: View {
     var body: some View {
         NavigationStack{
             VStack(spacing: 60){
-                Text("Enter your information")
+                Text("Enter your Age")
                 
                 TextField("Age (years)", text: $tmbFunc.age)
                     .keyboardType(.decimalPad)

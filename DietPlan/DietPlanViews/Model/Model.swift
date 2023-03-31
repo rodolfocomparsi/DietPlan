@@ -7,10 +7,15 @@
 import Foundation
 import SwiftUI
 
+
+
+
+
 class TmbFunc: ObservableObject {
     
-
-     
+    
+    
+    @AppStorage("name") var name = String()
     @AppStorage("weight") var weight: String = ""
     @AppStorage("height") var height: String = ""
     @AppStorage("age") var age: String = ""
@@ -42,6 +47,7 @@ class TmbFunc: ObservableObject {
         }
     }
 }
+
 
 
 struct NextButton: View {
