@@ -32,7 +32,19 @@ struct Tela02: View {
                     Text("Age: \(TmbFunc().age)")
                         .foregroundColor(.gray)
                     
+                    Text("Weight: \(TmbFunc().weight)")
+                        .foregroundColor(.gray)
+                    
+                    Text("Height: \(TmbFunc().height)")
+                        .foregroundColor(.gray)
+                    
+                    Text("Gender: \(TmbFunc().gender)")
+                        .foregroundColor(.gray)
+                  
                     Text("Goal: \(TmbFunc().goal)")
+                        .foregroundColor(.gray)
+                    
+                    Text("Kcal: \(TmbFunc().calorieIntake, specifier:"%.0f")")
                         .foregroundColor(.gray)
                 }
                 

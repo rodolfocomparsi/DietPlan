@@ -17,13 +17,29 @@ struct CalorieIntakeTmbView: View {
         
         
         NavigationStack{
-            VStack(spacing: 30){
-                VStack{
-                    Section(header: Text("TMB")) {
-                        Text("\(tmbFunc.tmb, specifier: "%.0f") calories per day")
-                    }
-                    Section(header: Text("Calorie Intake")) {
-                        Text("\(tmbFunc.calorieIntake, specifier:"%.0f") calories per day")
+            VStack(spacing: 50){
+                VStack(spacing: 10){
+                    Section(header: Text("Basal Metabolic Rate")
+                        .font(.title2)) {
+                            Text("Daily calorie consumption based on your physical characteristics.")
+                                .font(.subheadline)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.gray)
+                                .frame(width: 300)
+
+                            Text("\(tmbFunc.tmb, specifier: "%.0f") Calories per Day")
+                        }
+                }
+                VStack(spacing: 10){
+                    Section(header: Text("Calories Intake to go your Goal")
+                        .font(.title3)) {
+                            Text("Daily caloric consumption taking into account your goal which is \(tmbFunc.goal).")
+                                .font(.subheadline)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.gray)
+                                .frame(width: 300)
+                            
+                        Text("\(tmbFunc.calorieIntake, specifier:"%.0f") Calories per Day")
                     }
                     
                 }
