@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Tela03: View {
+struct FoodsList: View {
     
     var body: some View {
         
@@ -21,8 +21,8 @@ struct Tela03: View {
 }
 
 
-struct Tela03_Previews: PreviewProvider {
+struct FoodsList_Previews: PreviewProvider {
     static var previews: some View {
-        Tela03()
+        FoodsList()
     }
 }

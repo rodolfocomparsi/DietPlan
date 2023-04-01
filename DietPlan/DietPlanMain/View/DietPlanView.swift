@@ -22,13 +22,13 @@ struct DietPlanView: View {
                         Text("Information")
                     }
                 
-                Tela02()
+                PerfilScreen()
                     .tabItem {
                         Image(systemName: "person.circle")
                         Text("Perfil")
                     }
                 
-                Tela03()
+                FoodsList()
                     .tabItem {
                         Image(systemName: "fork.knife.circle")
                         Text("Foods")

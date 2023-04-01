@@ -44,14 +44,7 @@ struct CalorieIntakeTmbView: View {
                     
                 }
                 
-                NavigationLink(destination: Tela02(), isActive: $isNextPageActive7, label: {
-                    Button {
-                        isNextPageActive7 = true
-                    } label: {
-                        Text("Ok")
-                    }
-                    .buttonStyle(.borderedProminent)
-                })
+               
                     
 
                 

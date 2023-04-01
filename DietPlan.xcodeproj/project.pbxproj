@@ -12,7 +12,7 @@
 		7638274C29D45384002212DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7638274B29D45384002212DD /* Assets.xcassets */; };
 		7638274F29D45384002212DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7638274E29D45384002212DD /* Preview Assets.xcassets */; };
 		7638276629D469E5002212DD /* FoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276529D469E5002212DD /* FoodsView.swift */; };
-		7638276829D46A09002212DD /* Tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276729D46A09002212DD /* Tela02.swift */; };
+		7638276829D46A09002212DD /* PerfilScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276729D46A09002212DD /* PerfilScreen.swift */; };
 		7638276A29D46A13002212DD /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276929D46A13002212DD /* WeightView.swift */; };
 		7638276C29D47113002212DD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276B29D47113002212DD /* Model.swift */; };
 		7638276E29D592C4002212DD /* HeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638276D29D592C4002212DD /* HeightView.swift */; };
@@ -21,6 +21,7 @@
 		7638277429D5931B002212DD /* ActivityLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277329D5931B002212DD /* ActivityLevelView.swift */; };
 		7638277729D593C2002212DD /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277629D593C2002212DD /* GoalView.swift */; };
 		7638277929D59559002212DD /* CalorieIntakeTmbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277829D59559002212DD /* CalorieIntakeTmbView.swift */; };
+		7638277B29D89660002212DD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7638277A29D89660002212DD /* ProfileImage.swift */; };
 		AE705EE229D76025001C9B59 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE705EE129D76025001C9B59 /* NameView.swift */; };
 		AED01B3829D715B700B39232 /* FoodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED01B3729D715B700B39232 /* FoodsModel.swift */; };
 		AED01B3A29D7184600B39232 /* Tela03View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED01B3929D7184600B39232 /* Tela03View.swift */; };
@@ -33,7 +34,7 @@
 		7638274B29D45384002212DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7638274E29D45384002212DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7638276529D469E5002212DD /* FoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsView.swift; sourceTree = "<group>"; };
-		7638276729D46A09002212DD /* Tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02.swift; sourceTree = "<group>"; };
+		7638276729D46A09002212DD /* PerfilScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilScreen.swift; sourceTree = "<group>"; };
 		7638276929D46A13002212DD /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
 		7638276B29D47113002212DD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7638276D29D592C4002212DD /* HeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightView.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		7638277329D5931B002212DD /* ActivityLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelView.swift; sourceTree = "<group>"; };
 		7638277629D593C2002212DD /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		7638277829D59559002212DD /* CalorieIntakeTmbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieIntakeTmbView.swift; sourceTree = "<group>"; };
+		7638277A29D89660002212DD /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		AE705EE129D76025001C9B59 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		AED01B3729D715B700B39232 /* FoodsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsModel.swift; sourceTree = "<group>"; };
 		AED01B3929D7184600B39232 /* Tela03View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03View.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 			children = (
 				7638275829D45C75002212DD /* DietPlanMain */,
 				7638275929D45C95002212DD /* DietPlanViews */,
-				7638275D29D45D1C002212DD /* DietPlanTela02 */,
+				7638275D29D45D1C002212DD /* Perfil */,
 				AED01B3B29D7190E00B39232 /* DietPlantela03 */,
 				7638275E29D45D26002212DD /* Foods */,
 				7638274B29D45384002212DD /* Assets.xcassets */,
@@ -169,14 +171,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7638275D29D45D1C002212DD /* DietPlanTela02 */ = {
+		7638275D29D45D1C002212DD /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
 				7638276129D45D48002212DD /* Model */,
 				7638276029D45D42002212DD /* View */,
 				7638275F29D45D36002212DD /* ViewModel */,
 			);
-			path = DietPlanTela02;
+			path = Perfil;
 			sourceTree = "<group>";
 		};
 		7638275E29D45D26002212DD /* Foods */ = {
@@ -199,7 +201,8 @@
 		7638276029D45D42002212DD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7638276729D46A09002212DD /* Tela02.swift */,
+				7638276729D46A09002212DD /* PerfilScreen.swift */,
+				7638277A29D89660002212DD /* ProfileImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7638277229D592EB002212DD /* GenderView.swift in Sources */,
+				7638277B29D89660002212DD /* ProfileImage.swift in Sources */,
 				AED01B3829D715B700B39232 /* FoodsModel.swift in Sources */,
 				AE705EE229D76025001C9B59 /* NameView.swift in Sources */,
 				AED01B3A29D7184600B39232 /* Tela03View.swift in Sources */,
@@ -333,7 +337,7 @@
 				7638274829D45382002212DD /* DietPlanApp.swift in Sources */,
 				7638276629D469E5002212DD /* FoodsView.swift in Sources */,
 				7638276E29D592C4002212DD /* HeightView.swift in Sources */,
-				7638276829D46A09002212DD /* Tela02.swift in Sources */,
+				7638276829D46A09002212DD /* PerfilScreen.swift in Sources */,
 				7638276A29D46A13002212DD /* WeightView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
