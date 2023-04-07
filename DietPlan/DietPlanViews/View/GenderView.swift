@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct GenderView: View {
-    @State private var isNextPageActive4 = false
 
     @StateObject var tmbFunc = TmbFunc()
-    
+    var title: String
+
     var body: some View {
         
-        NavigationStack{
-            VStack(spacing: 60){
+            VStack(spacing: -35){
                 Text("Enter your Gender")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.top, 200)
+                
                 Picker("Gender", selection: $tmbFunc.gender) {
                     ForEach(tmbFunc.genderOptions, id: \.self) { option in
                         Text(option)
@@ -25,34 +28,25 @@ struct GenderView: View {
                 .pickerStyle(WheelPickerStyle())
                 .frame(width: 100)
                 
-                
-                
-                NavigationLink(destination: ActivityLevelView(), isActive: $isNextPageActive4, label: {
-                    Button(action: {
-                        tmbFunc.gender = String(tmbFunc.gender)
-                        isNextPageActive4 = true
-                    }){
-                        NextButton()
-                            .background(tmbFunc.gender.isEmpty ? Color.gray : Color.blue)
-                            .cornerRadius(8)
-                    }
-                    .disabled(tmbFunc.gender.isEmpty) // desativa o botão enquanto o campo de texto estiver vazio
-                })
-            }
-            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
-                                   startPoint: .top,
-                                   endPoint: .center)
-                                   .opacity(0.8))
-        }
-        
+                NavigationLink(destination: ActivityLevelView(title: "Activity Level")) {
+                    NextButton()
+                        .background(tmbFunc.gender.isEmpty ? Color.gray : Color.blue)
+                        .cornerRadius(8)
+                }.padding()
 
-    }
-            
+            }.modifier(Fundo())
+            .navigationTitle("Gender")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+
 }
 
 struct GenderView_Previews: PreviewProvider {
     static var previews: some View {
-        GenderView()
+        NavigationStack{
+            GenderView(title: "Activity Level")
+            
+            
+        }
     }
 }

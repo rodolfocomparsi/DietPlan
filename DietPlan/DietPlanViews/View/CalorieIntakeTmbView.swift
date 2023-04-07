@@ -9,27 +9,29 @@ import SwiftUI
 
 struct CalorieIntakeTmbView: View {
     @StateObject var tmbFunc = TmbFunc()
-    
-    @State private var isNextPageActive7 = false
-    
-    
+    var title: String
+
+   
     var body: some View {
-        
-        
-        NavigationStack{
-            VStack(spacing: 50){
+            VStack(spacing: 40){
                 VStack(spacing: 10){
                     Section(header: Text("Basal Metabolic Rate")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(.top, 180)
                         .font(.title2)) {
                             Text("Daily calorie consumption based on your physical characteristics.")
                                 .font(.subheadline)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.gray)
                                 .frame(width: 300)
+                        
 
                             Text("\(tmbFunc.tmb, specifier: "%.0f") Calories per Day")
                         }
                 }
+                
+                
                 VStack(spacing: 10){
                     Section(header: Text("Calories Intake to go your Goal")
                         .font(.title3)) {
@@ -44,33 +46,29 @@ struct CalorieIntakeTmbView: View {
                     
                 }
                 
-               
-                    
+                NavigationLink(destination: DietPlanView()) {
+                    Text("OK")
+                        .bold()
+                        .frame(width: 80, height: 40)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        
+                }
 
-                
-                
-            }
-            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
-                                       startPoint: .top,
-                                       endPoint: .center)
-                                       .opacity(0.8))
-            
-         
-
-            
-            
-            
-        }
-            
-            
-            
-         
+            }.modifier(Fundo())
+            .navigationTitle("Calories Intake")
+                .navigationBarTitleDisplayMode(.inline)
+              
     }
 }
 
 struct CalorieIntakeTmbView_Previews: PreviewProvider {
     static var previews: some View {
-        CalorieIntakeTmbView()
+        NavigationStack{
+            CalorieIntakeTmbView(title: "Calories Intake")
+            
+            
+        }
     }
 }

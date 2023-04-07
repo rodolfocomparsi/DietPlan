@@ -8,46 +8,40 @@
 import SwiftUI
 
 struct HeightView: View {
-    @State private var isNextPageActive2 = false
 
     @StateObject var tmbFunc = TmbFunc()
-    
+    var title: String
+
     var body: some View {
-        NavigationStack{
-            VStack(spacing: 60){
+            VStack(spacing: 63){
                 Text("Enter your Height")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.top, 200)
                 
                 TextField("Height (cm)", text: $tmbFunc.height)
                     .keyboardType(.decimalPad)
                     .frame(width: 100)
                 
+                NavigationLink(destination: AgeView(title: "Age")) {
+                    NextButton()
+                        .background(tmbFunc.age.isEmpty ? Color.gray : Color.blue)
+                        .cornerRadius(8)
+                }.padding()
                 
-                
-                NavigationLink(destination: AgeView(), isActive: $isNextPageActive2, label: {
-                    Button(action: {
-                        tmbFunc.height = String(tmbFunc.height) 
-                        isNextPageActive2 = true
-                    }){
-                        NextButton()
-                            .background(tmbFunc.height.isEmpty ? Color.gray : Color.blue)
-                            .cornerRadius(8)
-                    }
-                    .disabled(tmbFunc.height.isEmpty) // desativa o botão enquanto o campo de texto estiver vazio
-                })
-            }
-            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
-                                   startPoint: .top,
-                                   endPoint: .center)
-                                   .opacity(0.8))
-            
-        }
-        
+            }.modifier(Fundo())
+            .navigationTitle("Height")
+            .navigationBarTitleDisplayMode(.inline)
+
     }
 }
 
 struct HeightView_Previews: PreviewProvider {
     static var previews: some View {
-        HeightView()
+        NavigationStack{
+            
+            HeightView(title: "Age")
+            
+        }
     }
 }

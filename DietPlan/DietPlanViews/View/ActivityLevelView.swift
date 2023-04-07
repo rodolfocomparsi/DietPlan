@@ -8,53 +8,46 @@
 import SwiftUI
 
 struct ActivityLevelView: View {
-    @State private var isNextPageActive5 = false
 
     @StateObject var tmbFunc = TmbFunc()
-    
+    var title: String
+
     var body: some View {
         
-        NavigationStack{
-            VStack(spacing: 60){
+            VStack(spacing: -80){
                 Text("Enter your Activity Level")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.top, 200)
+                
                 Picker("Activity Level", selection: $tmbFunc.activityLevel) {
                     ForEach(activityLevelOptions, id: \.factor) { option in
                         Text(option.description)
                     }
                 }
                 .pickerStyle(WheelPickerStyle())
+                .padding(20)
                 
-                
-                
-                NavigationLink(destination: GoalView(), isActive: $isNextPageActive5, label: {
-                    Button(action: {
-                        tmbFunc.goal = String(tmbFunc.goal) 
+                NavigationLink(destination: GoalView(title: "Goal")) {
+                    NextButton()
+                        .background(tmbFunc.gender.isEmpty ? Color.gray : Color.blue)
+                        .cornerRadius(8)
+                }.padding(.top, 70)
 
-                        isNextPageActive5 = true
-                    }){
-                        NextButton()
-                            .background(tmbFunc.activityLevel.isZero ? Color.gray : Color.blue)
-                            .cornerRadius(8)
-                    }
-                    .disabled(tmbFunc.activityLevel.isZero) // desativa o botão enquanto o campo de texto estiver vazio
-                })
-            }
-            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-            .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
-                                   startPoint: .top,
-                                   endPoint: .center)
-                                   .opacity(0.8))
+            }.modifier(Fundo())
+            .navigationTitle("Activity Level")
+                .navigationBarTitleDisplayMode(.inline)
         }
-        
-
-    }
-            
 }
     
 
 
 struct ActivityLevelView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityLevelView()
+        NavigationStack{
+            
+            ActivityLevelView(title: "Goal")
+            
+        }
     }
 }

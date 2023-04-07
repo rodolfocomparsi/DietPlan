@@ -49,6 +49,17 @@ class TmbFunc: ObservableObject {
 }
 
 
+struct Fundo: ViewModifier{
+    func body(content: Content) -> some View {
+        content
+        .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity, alignment: .top)
+        .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
+                                   startPoint: .top,
+                                   endPoint: .center)
+            .opacity(0.8))
+    }
+}
+
 
 struct NextButton: View {
     var body: some View {
@@ -57,6 +68,7 @@ struct NextButton: View {
             .frame(width: 80, height: 40)
             .foregroundColor(.white)
             .cornerRadius(8)
+
     }
 }
 

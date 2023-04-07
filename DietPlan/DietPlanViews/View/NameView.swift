@@ -10,41 +10,33 @@ import SwiftUI
 
 struct NameView: View {
     @StateObject var tmbFunc = TmbFunc()
-    @State private var isNextPageActive0 = false
+    var title: String
     
     var body: some View {
     
-        NavigationStack{
-            
             VStack(spacing: 60){
                     
-                    Text("Enter your Name")
+                Text("Enter your Name")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.top, 200)
                     
                     TextField("Name:", text: $tmbFunc.name)
                     .frame(width: 100)
+                    .padding(.top, 30)
                     
                     
-                    
-                    NavigationLink(destination: WeightView(), isActive: $isNextPageActive0, label: {
-                        Button(action: {
-                            isNextPageActive0 = true
-                        }){
-                            NextButton()
-                                .background(tmbFunc.name.isEmpty ? Color.gray : Color.blue)
-                                .cornerRadius(8)
-                        }
-                        .disabled(tmbFunc.name.isEmpty) // desativa o botão enquanto o campo de texto estiver vazio
-                    })
                 
-            }.frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
-                .background(LinearGradient(colors: [.orange.opacity(0.6), .green.opacity(0.7)],
-                                       startPoint: .top,
-                                       endPoint: .center)
-                                       .opacity(0.8))
-            
-            
-            
-        }
+                NavigationLink(destination: WeightView(title: "Wight")) {
+                    NextButton()
+                        .background(tmbFunc.name.isEmpty ? Color.gray : Color.blue)
+                        .cornerRadius(8)
+                        .padding(.bottom, 00)
+                }
+    
+            }.modifier(Fundo())
+             .navigationTitle("Name")
+             .navigationBarTitleDisplayMode(.inline)
         
     }
 }
@@ -53,6 +45,8 @@ struct NameView: View {
 
 struct NameView_Previews: PreviewProvider {
     static var previews: some View {
-        NameView()
+        NavigationStack{
+            NameView(title: "Name")
+        }
     }
 }

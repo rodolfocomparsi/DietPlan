@@ -30,9 +30,13 @@ struct PerfilScreen: View {
                                 .resizable()
                                 .scaledToFit()
                                 .clipShape(Circle())
-                                .padding(30)
+                                .padding(20)
                         } else {
-                            Text("Selecione uma imagem")
+                            Image(systemName: "person")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 85.0, height: 85.0)
+                                .padding(30)
                         }
                         Button("Escolher imagem") {
                             isShowingImagePicker = true
@@ -69,7 +73,6 @@ struct PerfilScreen: View {
                 }
                 
               
-                
                 
                 
                 

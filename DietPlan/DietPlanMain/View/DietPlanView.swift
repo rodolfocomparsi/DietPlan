@@ -16,7 +16,7 @@ struct DietPlanView: View {
         VStack{
             TabView(selection: $selectionTabView) {
                 
-                NameView()
+                NameView(title: "Name")
                     .tabItem {
                         Image(systemName: "info.circle.fill")
                         Text("Information")
@@ -40,6 +40,7 @@ struct DietPlanView: View {
             
             
         }
+        .modifier(Fundo())
         .frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
 //        .background(LinearGradient(colors: [.cyan, .green],
 //                               startPoint: .top,

@@ -14,7 +14,7 @@ struct FoodsList: View {
         
         ScrollView(.vertical){
             FoodStruct()
-        }
+        }.modifier(Fundo())
         
         
     }
